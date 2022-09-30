@@ -35,18 +35,15 @@
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="/js/particles.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-
-    <!-- Themes:
-         Auto:   css/skeleton-auto.css
-         Light:  css/skeleton-light.css
-         Dark:   css/skeleton-dark.css
-  -->
     <link rel="stylesheet" href="css/skeleton-auto.css">
     <link rel="stylesheet" href="css/brands.css">
     <link rel="stylesheet" href="css/brands-extended.css">
+    <link rel="stylesheet" href="css/particles.css">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -58,8 +55,43 @@
 
 <body>
 
+    <!-- count particles -->
+    <div class="count-particles">
+        <span class="js-count-particles">--</span> particles
+    </div>
+
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- stats.js -->
+    <script src="js/lib/stats.js"></script>
+    <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
+
     <!-- Primary Page Layout -->
     <div class="container">
+
         <div class="row">
             <div class="column" style="margin-top: 10%">
 
@@ -85,20 +117,13 @@
                 <img src="images/avatar.png" class="avatar" srcset="images/avatar.png" alt="FM1101101">
 
                 <!-- Title -->
-                <h1>Portofolio /FM1101101</h1>
+                <h1>Fuad Muhammad</h1>
 
                 <!-- Short Bio -->
-                <p>👋 Hi, My name is <b>Fuad Muhammad</b>
+                <p>👋 Hello there!
+                    I am an HVAC Engineer based in Indonesia.
                     <br>
-                    👷🏽 I am an HVAC Engineer based in Indonesia
-                    <br>
-                    👀 I am interested in Science and Technology
-                    <br>
-                    🌱 I am currently learning HVAC Instrument and Controls
-                    <br>
-                    💞️ I am looking to collaborate on HVAC Engineering
-                    <br>
-                    ⚒️ I am available for remote work or freelance project.
+                    I am Interested in Science and Technology, currently learning HVAC Instrument and Controls.
                 </p>
                 <!--
 
@@ -135,7 +160,7 @@
                 <a class="button button-default" href="mailto:fm1101101@outlook.com" target="_blank" rel="noopener">
                     <img class="icon" src="images/icons/email.svg" alt="Email Icon">Send Me Email</a>
                 <br>
-            
+
                 <!-- WhatsApp -->
                 <a class="button button-whatsapp" href="https://www.wa.me/+6287804252266" target="_blank"
                     rel="noopener">
@@ -165,7 +190,7 @@
                 <br>
 
                 <!-- Telegram -->
-                <a class="button button-telegram" href="https://www.fm1101101.t.me" target="_blank" rel="noopener">
+                <a class="button button-telegram" href="https://fm1101101.t.me" target="_blank" rel="noopener">
                     <img class="icon" src="images/icons/telegram.svg" alt="Telegram Logo">Telegram</a>
                 <br>
 
@@ -176,9 +201,10 @@
 
                 <br>
                 <!-- Footer -->
-                <p>Fork <a href="https://github.com/FM1101101/fm1101101.github.io">me</a> | Powered by <a
-                        href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a>.</p>
-
+                <footer>
+                    <p>Fork <a href="https://github.com/FM1101101/fm1101101.github.io/fork">me</a> | Powered by <a
+                            href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a>.</p>
+                </footer>
             </div>
         </div>
     </div>
