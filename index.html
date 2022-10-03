@@ -25,7 +25,7 @@
 
     <!-- Page Information -->
     <meta charset="utf-8">
-    <title>Portofolio /FM1101101</title>
+    <title>/FM1101101</title>
     <meta name="description" content="Portofolio Fuad">
     <meta name="author" content="Fuad Muhammad">
 
@@ -35,15 +35,12 @@
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
 
-    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-    <script src="/js/particles.js"></script>
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton-auto.css">
+    <link rel="stylesheet" href="css/skeleton-dark.css">
     <link rel="stylesheet" href="css/brands.css">
     <link rel="stylesheet" href="css/brands-extended.css">
-    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="/css/solar-system.css">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -55,63 +52,26 @@
 
 <body>
 
-    <!-- count particles -->
-    <div class="count-particles">
-        <span class="js-count-particles">--</span> particles
+    <!-- Solar System Background -->
+    <div class="solar-syst">
+        <div class="sun"></div>
+        <div class="mercury"></div>
+        <div class="venus"></div>
+        <div class="earth"></div>
+        <div class="mars"></div>
+        <div class="jupiter"></div>
+        <div class="saturn"></div>
+        <div class="uranus"></div>
+        <div class="neptune"></div>
+        <div class="pluto"></div>
+        <div class="asteroids-belt"></div>
     </div>
-
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-
-    <!-- scripts -->
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
-
-    <!-- stats.js -->
-    <script src="js/lib/stats.js"></script>
-    <script>
-        var count_particles, stats, update;
-        stats = new Stats;
-        stats.setMode(0);
-        stats.domElement.style.position = 'absolute';
-        stats.domElement.style.left = '0px';
-        stats.domElement.style.top = '0px';
-        document.body.appendChild(stats.domElement);
-        count_particles = document.querySelector('.js-count-particles');
-        update = function () {
-            stats.begin();
-            stats.end();
-            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-            }
-            requestAnimationFrame(update);
-        };
-        requestAnimationFrame(update);
-    </script>
 
     <!-- Primary Page Layout -->
     <div class="container">
 
         <div class="row">
             <div class="column" style="margin-top: 10%">
-
-                <!-- 
-
-          ## Getting Started with LittleLink
-
-          This page has been built with every pre-designed button available in LittleLink by default. You can rearrange and delete as needed.
-
-          You can add your own brand or others brands you may need in the `css/brands.css` file. 
-
-          You can add custom icons to `images/icons/...`. It is recommended to use a 24x24 .SVG.
-
-          Edit the "Your Image Here" section to add your own personal branding, like a picture of yourself or your brand logo!
-
-          Edit the "Title" section to change the page heading. You can use something like your name, your social handle, or your brand name.
-
-          Edit the "Short Bio" section tell users about yourself or your brand.
-
-        -->
 
                 <!-- Your Image Here -->
                 <img src="images/avatar.png" class="avatar" srcset="images/avatar.png" alt="FM1101101">
@@ -125,79 +85,78 @@
                     <br>
                     I am Interested in Science and Technology, currently learning HVAC Instrument and Controls.
                 </p>
-                <!--
 
-          ## Breaking down <a> attributes:
-          
-          1.) class="button button-default" | The first "button" here is telling this <a> tag that it should make this element a button and applies the default styling in `css/brands.css`.
-          The second portion, button-default, is declaring the specific brand style you would like to apply. Here we're applying the "default" style and color.
-          If you want to make this button to use the brand colors for Discord, just change "button-default" to "button-discord". Brands are found in `css/brands.css`. You can always edit & add your own there.
-
-          2.) Replace the # in href="#" with the desired target URL for the button.
-
-          3.) target="_blank" | This attribute opens links in a new tab. Remove this attribute to prevent links from opening in a new tab.
-
-          4.) rel="noopener" | This attribute instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it.
-          This is especially useful when opening untrusted links. https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/noopener
-
-          ## Breaking down the <img> attributes:
-          
-          1.) class="icon" | This class is telling the <img> tag that it should use the styling for icons found in `css/brands.css`.
-
-          2.) src="icons/[icon_name].svg" | This defines the icon you would like to display from the icons/ folder. For example, you can change this to src="icons/discord.svg" to use the Discord icon.
-          Add your own 24x24 icons to the "icons" folder to reference them. We recommend providing a SVG.
-
-          3.) alt="Example Logo" | This alt attribute helps provides alternate text for an image, this can assist users who use screen readers. 
-
-        -->
-
-                <!-- CV -->
-                <a class="button button-dev-to" href="/curriculum-vitae" target="_blank" rel="noopener">
-                    <img class="icon" src="images/icons/resume.svg" alt="Email Icon">Curriculum Vitae</a>
-                <br>
+                <!-- Social Media Button -->
+                <div class="socmed">
+                    <a class="icon button-whatsapp" href="https://www.wa.me/+6287804252266" target="_blank"
+                        rel="noopener">
+                        <img class="icon" src="images/icons/whatsapp_alt.svg" alt="WhatsApp Logo"></a>
+                    <a class="icon button-telegram" href="https://fm1101101.t.me" target="_blank" rel="noopener">
+                        <img class="icon" src="images/icons/telegram.svg" alt="Telegram Logo"></a>
+                    <a class="icon button-faceb" href="https://www.fb.me/fm1101101" target="_blank" rel="noopener">
+                        <img class="icon" src="images/icons/facebook.svg" alt="Facebook Logo"></a>
+                    <a class="icon button-twit" href="https://www.twitter.com/fm1101101" target="_blank" rel="noopener">
+                        <img class="icon" src="images/icons/twitter.svg" alt="Twitter Logo"></a>
+                    <a class="icon button-instagram" href="https://www.instagram.com/fm1101101" target="_blank"
+                        rel="noopener">
+                        <img class="icon" src="images/icons/instagram.svg" alt="Instagram Logo"></a>
+                    <a class="icon button-linked" href="https://www.linkedin.com/in/fm1101101/" target="_blank"
+                        rel="noopener">
+                        <img class="icon" src="images/icons/linkedin.svg" alt="LinkedIn Logo"></a>
+                    <a class="icon button-github" href="https://www.github.com/fm1101101" target="_blank"
+                        rel="noopener">
+                        <img class="icon" src="images/icons/github.svg" alt="GitHub Logo"></a>
+                    <br>
+                </div>
 
                 <!-- Email -->
                 <a class="button button-default" href="mailto:fm1101101@outlook.com" target="_blank" rel="noopener">
                     <img class="icon" src="images/icons/email.svg" alt="Email Icon">Send Me Email</a>
                 <br>
 
-                <!-- WhatsApp -->
+                <!-- CV -->
+                <a class="button button-dev-to" href="/curriculum-vitae" target="_blank" rel="noopener">
+                    <img class="icon" src="images/icons/download_light.svg" alt="Email Icon">Curriculum Vitae</a>
+                <br>
+
+                <!-- WhatsApp
                 <a class="button button-whatsapp" href="https://www.wa.me/+6287804252266" target="_blank"
                     rel="noopener">
                     <img class="icon" src="images/icons/whatsapp.svg" alt="WhatsApp Logo">WhatsApp</a>
                 <br>
 
-                <!-- LinkedIn -->
+                LinkedIn
                 <a class="button button-linked" href="https://www.linkedin.com/in/fm1101101/" target="_blank"
                     rel="noopener">
                     <img class="icon" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn</a>
                 <br>
 
-                <!-- Facebook -->
+                Facebook
                 <a class="button button-faceb" href="https://www.fb.me/fm1101101" target="_blank" rel="noopener">
                     <img class="icon" src="images/icons/facebook.svg" alt="Facebook Logo">Facebook</a>
                 <br>
 
-                <!-- Twitter -->
+                Twitter
                 <a class="button button-twit" href="https://www.twitter.com/fm1101101" target="_blank" rel="noopener">
                     <img class="icon" src="images/icons/twitter.svg" alt="Twitter Logo">Twitter</a>
                 <br>
 
-                <!-- Instagram -->
+                Instagram
                 <a class="button button-instagram" href="https://www.instagram.com/fm1101101" target="_blank"
                     rel="noopener">
                     <img class="icon" src="images/icons/instagram.svg" alt="Instagram Logo">Instagram</a>
                 <br>
 
-                <!-- Telegram -->
+                Telegram
                 <a class="button button-telegram" href="https://fm1101101.t.me" target="_blank" rel="noopener">
                     <img class="icon" src="images/icons/telegram.svg" alt="Telegram Logo">Telegram</a>
                 <br>
 
-                <!-- GitHub -->
+                GitHub
                 <a class="button button-github" href="https://www.github.com/fm1101101" target="_blank" rel="noopener">
                     <img class="icon" src="images/icons/github.svg" alt="GitHub Logo">GitHub</a>
                 <br>
+                -->
 
                 <br>
                 <!-- Footer -->
